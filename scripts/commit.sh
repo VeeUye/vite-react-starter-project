@@ -1,37 +1,40 @@
 #!/bin/bash
-# scripts/quick-commit.sh
 
-# Colors
-BLUE='\033[0;34m'
-GREEN='\033[0;32m'
-NC='\033[0m'
+# Array of semantic commit types
+commit_types=(
+    "feat: New feature"
+    "fix: Bug fix"
+    "docs: Documentation change"
+    "style: Code style update"
+    "refactor: Code refactor"
+    "test: Test updates"
+    "chore: Maintenance tasks"
+    "perf: Performance improvement"
+    "ci: CI/CD changes"
+    "revert: Revert changes"
+)
 
-# Common types and scopes
-TYPES=("feat" "fix" "docs" "style" "refactor" "test" "chore")
-SCOPES=("calculator" "theme" "components" "utils" "tests")
-
-echo -e "${BLUE}Type number:${NC}"
-select type in "${TYPES[@]}"; do
-  if [[ -n $type ]]; then
-    break
-  fi
+# Display commit types with numbers
+echo "Select commit type:"
+for i in "${!commit_types[@]}"; do
+    echo "$((i+1))) ${commit_types[$i]}"
 done
 
-echo -e "${BLUE}Scope number:${NC}"
-select scope in "${SCOPES[@]}" "other" "none"; do
-  if [[ -n $scope ]]; then
-    break
-  fi
-done
+# Get user selection
+read -p "Enter number (1-${#commit_types[@]}): " selection
 
-echo -e "${BLUE}Description:${NC}"
-read -r description
-
-if [[ $scope == "none" ]]; then
-  commit_message="$type: $description"
-else
-  commit_message="$type($scope): $description"
+# Validate selection
+if ! [[ "$selection" =~ ^[0-9]+$ ]] || [ "$selection" -lt 1 ] || [ "$selection" -gt "${#commit_types[@]}" ]; then
+    echo "Invalid selection"
+    exit 1
 fi
 
-echo -e "\n${GREEN}Creating commit:${NC} $commit_message"
-git commit -m "$commit_message"
+# Extract commit type prefix
+commit_type=${commit_types[$((selection-1))]}
+prefix=${commit_type%%:*}
+
+# Get commit message
+read -p "Enter commit message: " message
+
+# Create the final commit command
+git commit -m "$prefix: $message"
