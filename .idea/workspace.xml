@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc919bcf-1e26-46bb-b2ef-6e7f2d3576a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/theme/ThemeProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/theme/ThemeProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mocks/theme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mocks/theme.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730718304226</updated>
-      <workItem from="1730718305592" duration="10396000" />
+      <workItem from="1730718305592" duration="11085000" />
     </task>
     <servers />
   </component>
