@@ -24,6 +24,6 @@ describe('App', () => {
   it('renders the main title', () => {
     render(<App />)
 
-    expect(screen.getByText('Compound Interest Calculator')).toBeInTheDocument()
+    expect(screen.getByText('My awesome app')).toBeInTheDocument()
   })
 })

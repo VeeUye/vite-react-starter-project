@@ -1,50 +1,90 @@
-# React + TypeScript + Vite
+# Vite + React Project Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.10-blue.svg)](https://vitejs.dev/)
+[![Testing Library](https://img.shields.io/badge/Testing%20Library-16.0.1-blue.svg)](https://testing-library.com/)
+[![Storybook](https://img.shields.io/badge/Storybook-8.4.2-blue.svg)](https://storybook.js.org/)
 
-Currently, two official plugins are available:
+A modern React project template with TypeScript, Vite, Testing Library, and Storybook. Features atomic design
+principles, CSS Modules, and comprehensive testing setup.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 🚀 **Vite** - Lightning fast build tool
+- 📝 **TypeScript** - Type safety with strict mode
+- 🎨 **CSS Modules** + **SASS** - Scoped styling with preprocessor
+- 📚 **Storybook** - Component documentation and testing
+- ✅ **Testing Library** - Component and integration testing
+- 🎭 **Theme Support** - Built-in dark/light theme switching
+- 📐 **Atomic Design** - Scalable component architecture
+- 🔍 **ESLint** + **Prettier** - Code quality tools
+- 🪝 **Husky** + **lint-staged** - Git hooks for quality control
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Quick Start
 
-- Configure the top-level `parserOptions` property like this:
+```bash
+# Clone the template
+git clone [your-repo-url]
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Start Storybook
+npm run storybook
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Scripts
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
+- `npm run test:coverage` - Run tests with coverage report
+- `npm run storybook` - Start Storybook server
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+- `npm run type-check` - Check TypeScript types
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Project Structure
+
 ```
+src/
+├── components/        # Components following atomic design
+│   ├── atoms/        # Basic building blocks
+│   ├── molecules/    # Combinations of atoms
+│   └── organisms/    # Complex components
+├── contexts/         # React contexts
+├── hooks/           # Custom React hooks
+├── styles/          # Global styles and variables
+└── test/            # Test utilities and setup
+```
+
+## Component Structure
+
+```
+ComponentName/
+├── index.tsx           # Component implementation
+├── index.test.tsx      # Component tests
+├── index.stories.tsx   # Storybook stories
+└── styles.module.scss  # Scoped styles
+```
+
+## Best Practices
+
+- Follow TDD principles - write tests first
+- Use TypeScript strict mode
+- Follow atomic design principles
+- Use CSS Modules for scoped styling
+- Document components with Storybook
+- Keep components small and focused
+- Use semantic commit messages
+
+## License
+
+MIT

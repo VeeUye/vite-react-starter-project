@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <button onClick={toggleTheme} data-testid="theme-toggle">
         Toggle {isDark ? 'Light' : 'Dark'} Mode
       </button>
-      <h1>Compound Interest Calculator</h1>
+      <h1>My awesome app</h1>
     </div>
   )
 }
