@@ -1,17 +1,17 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '../../../test/utils'
-import { Button } from './Button'
+import { Index } from './index.tsx'
 import styles from './styles.module.scss'
 
 describe('Button', () => {
   it('renders children correctly', () => {
-    render(<Button>Click me</Button>)
+    render(<Index>Click me</Index>)
     expect(screen.getByText('Click me')).toBeInTheDocument()
   })
 
   it('handles click events', () => {
     const handleClick = vi.fn()
-    render(<Button onClick={handleClick}>Click me</Button>)
+    render(<Index onClick={handleClick}>Click me</Index>)
 
     fireEvent.click(screen.getByText('Click me'))
     expect(handleClick).toHaveBeenCalledTimes(1)
@@ -20,9 +20,9 @@ describe('Button', () => {
   it('can be disabled', () => {
     const handleClick = vi.fn()
     render(
-      <Button disabled onClick={handleClick}>
+      <Index disabled onClick={handleClick}>
         Click me
-      </Button>
+      </Index>
     )
 
     const button = screen.getByRole('button')
@@ -33,16 +33,16 @@ describe('Button', () => {
   })
 
   it('applies variant classes correctly', () => {
-    const { rerender } = render(<Button variant="primary">Button</Button>)
+    const { rerender } = render(<Index variant="primary">Button</Index>)
     expect(screen.getByRole('button')).toHaveClass(styles.primary)
 
-    rerender(<Button variant="secondary">Button</Button>)
+    rerender(<Index variant="secondary">Button</Index>)
     expect(screen.getByRole('button')).toHaveClass(styles.secondary)
   })
 
   it('combines custom className with default classes', () => {
     const customClass = 'custom-class'
-    render(<Button className={customClass}>Button</Button>)
+    render(<Index className={customClass}>Button</Index>)
 
     const button = screen.getByRole('button')
     expect(button).toHaveClass(styles.button)
