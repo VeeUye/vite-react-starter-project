@@ -1,49 +1,47 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import Button from './index';
+import type { Meta, StoryObj } from '@storybook/react'
+import { Button } from './Button'
 
+// This is the required metadata configuration
 const meta = {
-    title: 'Atoms/Button',
-    component: Button,
-    parameters: {
-        layout: 'centered',
+  title: 'Components/Atoms/Button',
+  component: Button,
+  parameters: {
+    layout: 'centered',
+  },
+  // Define reusable args
+  args: {
+    children: 'Button Text',
+  },
+  // Define which args can be controlled
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary'],
     },
-    tags: ['autodocs'],
-} satisfies Meta<typeof Button>;
+    onClick: { action: 'clicked' },
+  },
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof Button>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
-    args: {
-        children: 'Primary Button',
-        variant: 'primary',
-    },
-};
+  args: {
+    variant: 'primary',
+    children: 'Primary Button',
+  },
+}
 
 export const Secondary: Story = {
-    args: {
-        children: 'Secondary Button',
-        variant: 'secondary',
-    },
-};
+  args: {
+    variant: 'secondary',
+    children: 'Secondary Button',
+  },
+}
 
-export const Small: Story = {
-    args: {
-        children: 'Small Button',
-        size: 'small',
-    },
-};
-
-export const Large: Story = {
-    args: {
-        children: 'Large Button',
-        size: 'large',
-    },
-};
-
-export const FullWidth: Story = {
-    args: {
-        children: 'Full Width Button',
-        fullWidth: true,
-    },
-};
+export const Disabled: Story = {
+  args: {
+    ...Primary.args,
+    disabled: true,
+  },
+}

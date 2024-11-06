@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -16,9 +20,12 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
     "types": [
+      "vite/client",
       "vitest/globals",
       "@testing-library/jest-dom",
       "node"
@@ -32,7 +39,12 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/test/setup/**/*.ts",
-    "src/test/setup/**/*.tsx"
+    "src/test/setup/**/*.tsx",
+    ".storybook/**/*"
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
