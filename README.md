@@ -40,16 +40,41 @@ npm test
 npm run storybook
 ```
 
-## Scripts
+Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm test` - Run tests
-- `npm run test:coverage` - Run tests with coverage report
-- `npm run storybook` - Start Storybook server
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
-- `npm run type-check` - Check TypeScript types
+npm run dev - Start development server
+npm run build - Build for production
+npm test - Run tests
+npm run test:coverage - Run tests with coverage report
+npm run storybook - Start Storybook server
+npm run lint - Run ESLint
+npm run format - Format code with Prettier
+npm run type-check - Check TypeScript types
+npm run commit - Interactive commit message helper
+
+Semantic Commits
+The project includes a semantic commit script that enforces consistent commit messages. Use it by running:
+
+```bash
+npm run commit
+```
+
+Types available:
+
+feat: New feature
+fix: Bug fix
+docs: Documentation changes
+style: Code style updates (formatting, etc)
+refactor: Code changes that neither fix bugs nor add features
+test: Adding or updating tests
+chore: Updates to build process or auxiliary tools
+perf: Performance improvements
+
+Example commit message:
+
+```bash
+feat(button): add disabled state styling
+```
 
 ## Project Structure
 
