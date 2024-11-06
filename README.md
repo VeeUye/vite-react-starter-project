@@ -5,24 +5,26 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4.10-blue.svg)](https://vitejs.dev/)
 [![Testing Library](https://img.shields.io/badge/Testing%20Library-16.0.1-blue.svg)](https://testing-library.com/)
 [![Storybook](https://img.shields.io/badge/Storybook-8.4.2-blue.svg)](https://storybook.js.org/)
+[![Deploy](https://github.com/[your-username]/[repo-name]/actions/workflows/deploy.yml/badge.svg)](https://github.com/[your-username]/[repo-name]/actions/workflows/deploy.yml)
 
 A modern React project template with TypeScript, Vite, Testing Library, and Storybook. Features atomic design
 principles, CSS Modules, and comprehensive testing setup.
 
-## ✨ Features
+## Features
 
-* 🚀 **Vite** - Lightning fast build tool
-* 📝 **TypeScript** - Type safety with strict mode
-* 🎨 **CSS Modules** + **SASS** - Scoped styling with preprocessor
-* 📚 **Storybook** - Component documentation and testing
-* ✅ **Testing Library** - Component and integration testing
-* 🎭 **Theme Support** - Built-in dark/light theme switching
-* 📐 **Atomic Design** - Scalable component architecture
-* 🔍 **ESLint** + **Prettier** - Code quality tools
-* 🪝 **Husky** + **lint-staged** - Git hooks for quality control
-* 📋 **Semantic Commits** - Standardized commit messages
+- 🚀 **Vite** - Lightning fast build tool
+- 📝 **TypeScript** - Type safety with strict mode
+- 🎨 **CSS Modules** + **SASS** - Scoped styling with preprocessor
+- 📚 **Storybook** - Component documentation and testing
+- ✅ **Testing Library** - Component and integration testing
+- 🎭 **Theme Support** - Built-in dark/light theme switching
+- 📐 **Atomic Design** - Scalable component architecture
+- 🔍 **ESLint** + **Prettier** - Code quality tools
+- 🪝 **Husky** + **lint-staged** - Git hooks for quality control
+- 📋 **Semantic Commits** - Standardized commit messages
+- 🚀 **GitHub Actions** - Automated deployment to GitHub Pages
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the template
@@ -35,7 +37,7 @@ npm install
 npm run dev
 ```
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Command                 | Description               |
 |-------------------------|---------------------------|
@@ -49,9 +51,33 @@ npm run dev
 | `npm run type-check`    | Check TypeScript types    |
 | `npm run commit`        | Interactive commit helper |
 
-## 📁 Project Structure
+## Deployment
 
-```text
+This project uses GitHub Actions for automated deployment to GitHub Pages.
+
+### Deployment Process
+
+1. Push changes to the `main` branch
+2. GitHub Actions automatically:
+    - Builds the project
+    - Runs tests
+    - Deploys to GitHub Pages
+
+### Manual Deployment
+
+```bash
+# Build locally
+npm run build
+
+# Preview build
+npm run preview
+```
+
+View the deployment status in the [Actions tab](https://github.com/[your-username]/[repo-name]/actions)
+
+## Project Structure
+
+```
 src/
 ├── components/        # Components following atomic design
 │   ├── atoms/        # Basic building blocks
@@ -63,9 +89,9 @@ src/
 └── test/            # Test utilities and setup
 ```
 
-## 🧱 Component Structure
+## Component Structure
 
-```text
+```
 ComponentName/
 ├── index.tsx           # Component implementation
 ├── index.test.tsx      # Component tests
@@ -73,7 +99,7 @@ ComponentName/
 └── styles.module.scss  # Scoped styles
 ```
 
-## 📝 Semantic Commits
+## Semantic Commits
 
 The project uses an interactive commit script to ensure consistent commit messages.
 
@@ -92,7 +118,7 @@ The script will prompt you to:
 ### Available Types
 
 | Type       | Description    | Example                             |
-|:-----------|:---------------|:------------------------------------|
+|------------|----------------|-------------------------------------|
 | `feat`     | New feature    | `feat: add user authentication`     |
 | `fix`      | Bug fix        | `fix: resolve button click event`   |
 | `docs`     | Documentation  | `docs: update API references`       |
@@ -104,17 +130,17 @@ The script will prompt you to:
 | `ci`       | CI/CD changes  | `ci: add github actions workflow`   |
 | `revert`   | Revert changes | `revert: remove faulty feature`     |
 
-## 💻 Best Practices
+## Best Practices
 
-* Follow TDD principles - write tests first
-* Use TypeScript strict mode
-* Follow atomic design principles
-* Use CSS Modules for scoped styling
-* Document components with Storybook
-* Keep components small and focused
-* Use semantic commit messages
+- Follow TDD principles - write tests first
+- Use TypeScript strict mode
+- Follow atomic design principles
+- Use CSS Modules for scoped styling
+- Document components with Storybook
+- Keep components small and focused
+- Use semantic commit messages
 
-## 📄 License
+## License
 
 MIT
 
