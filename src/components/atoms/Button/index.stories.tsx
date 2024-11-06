@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Index } from './index.tsx'
+import { Button } from './index.tsx'
 
 // This is the required metadata configuration
 const meta = {
   title: 'Components/Atoms/Button',
-  component: Index,
+  component: Button,
   parameters: {
     layout: 'centered',
   },
@@ -20,7 +20,7 @@ const meta = {
     },
     onClick: { action: 'clicked' },
   },
-} satisfies Meta<typeof Index>
+} satisfies Meta<typeof Button>
 
 export default meta
 type Story = StoryObj<typeof meta>

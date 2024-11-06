@@ -5,7 +5,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary'
 }
 
-export function Index({
+export function Button({
   variant = 'primary',
   className,
   children,
