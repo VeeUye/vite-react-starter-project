@@ -17,12 +17,11 @@ principles, CSS Modules, comprehensive testing setup, and theme toggle component
 - 🎨 **CSS Modules** + **SASS** - Scoped styling with preprocessor
 - 📚 **Storybook** - Component documentation and testing
 - ✅ **Testing Library** - Component and integration testing
-- 🎭 Theme System - Built-in dark/light theme switching with persistent storage
+- 🎭 **Theme System** - Built-in dark/light theme switching with persistent storage
     - Elegant theme toggle component with smooth transitions
     - Type-safe theme configuration
     - Automatic system preference detection
     - Local storage persistence
-- 🎭 **Theme Support** - Built-in dark/light theme switching
 - 📐 **Atomic Design** - Scalable component architecture
 - 🔍 **ESLint** + **Prettier** - Code quality tools
 - 🪝 **Husky** + **lint-staged** - Git hooks for quality control
