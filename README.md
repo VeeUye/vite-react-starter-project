@@ -5,10 +5,10 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4.10-blue.svg)](https://vitejs.dev/)
 [![Testing Library](https://img.shields.io/badge/Testing%20Library-16.0.1-blue.svg)](https://testing-library.com/)
 [![Storybook](https://img.shields.io/badge/Storybook-8.4.2-blue.svg)](https://storybook.js.org/)
-[![Deploy](https://github.com/[your-username]/[repo-name]/actions/workflows/deploy.yml/badge.svg)](https://github.com/[your-username]/[repo-name]/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/veeuye/vite-react-starter-project/actions/workflows/deploy.yml/badge.svg)](https://github.com/veeuye/vite-react-starter-project/actions/workflows/deploy.yml)
 
 A modern React project template with TypeScript, Vite, Testing Library, and Storybook. Features atomic design
-principles, CSS Modules, and comprehensive testing setup.
+principles, CSS Modules, comprehensive testing setup, and theme toggle component.
 
 ## Features
 
@@ -17,6 +17,11 @@ principles, CSS Modules, and comprehensive testing setup.
 - 🎨 **CSS Modules** + **SASS** - Scoped styling with preprocessor
 - 📚 **Storybook** - Component documentation and testing
 - ✅ **Testing Library** - Component and integration testing
+- 🎭 Theme System - Built-in dark/light theme switching with persistent storage
+    - Elegant theme toggle component with smooth transitions
+    - Type-safe theme configuration
+    - Automatic system preference detection
+    - Local storage persistence
 - 🎭 **Theme Support** - Built-in dark/light theme switching
 - 📐 **Atomic Design** - Scalable component architecture
 - 🔍 **ESLint** + **Prettier** - Code quality tools
@@ -28,12 +33,18 @@ principles, CSS Modules, and comprehensive testing setup.
 
 ```bash
 # Clone the template
-git clone [your-repo-url]
+1. Click "Use this template" button
+2. Create your new repository from this template
+3. Clone your new repository:
+
+  git clone https://github.com/YOUR_USERNAME/YOUR_NEW_REPO.git
+  
+cd YOUR_NEW_REPO
 
 # Install dependencies
 npm install
-
 # Start development server
+
 npm run dev
 ```
 
@@ -130,15 +141,32 @@ The script will prompt you to:
 | `ci`       | CI/CD changes  | `ci: add github actions workflow`   |
 | `revert`   | Revert changes | `revert: remove faulty feature`     |
 
-## Best Practices
+## Theme System
 
-- Follow TDD principles - write tests first
-- Use TypeScript strict mode
-- Follow atomic design principles
-- Use CSS Modules for scoped styling
-- Document components with Storybook
-- Keep components small and focused
-- Use semantic commit messages
+A type-safe theme implementation combining CSS Modules with React Context.
+
+### Usage
+
+```tsx
+import { ThemeToggle } from '@/components/atoms/ThemeToggle'
+import styles from './Header.module.scss'
+
+function Header() {
+  return (
+    <header className={styles.header}>
+      <ThemeToggle />
+    </header>
+  )
+}
+```
+
+### Features
+
+- 🎨 CSS Modules for scoped styling
+- 💾 Theme persistence across sessions
+- ⌨️ Keyboard accessible theme toggle
+- 🔒 Type-safe theme values
+- 🎭 Light/Dark mode with system preference detection
 
 ## License
 
