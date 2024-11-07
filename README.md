@@ -33,7 +33,7 @@ principles, CSS Modules, comprehensive testing setup, and theme toggle component
 
 ```bash
 # Clone the template
-1. Click "Use this template" button
+1. Click "Use this template" button above
 2. Create your new repository from this template
 3. Clone your new repository:
 
